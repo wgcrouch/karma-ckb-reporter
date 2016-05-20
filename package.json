@@ -1,0 +1,27 @@
+{
+  "name": "karma-ckb-reporter",
+  "version": "0.0.1",
+  "description": "Karma reporter to use LED lighting on Corsair Keyboards (with ckb driver)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "corsair",
+    "karma-reporter",
+    "karma",
+    "led",
+    "ckb",
+    "karma-plugin"
+  ],
+  "author": "Wayne Crouch <wgcrouch@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "karma": ">=0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wgcrouch/karma-ckb-reporter"
+  }
+
+}
