@@ -8,7 +8,7 @@ function CkbReporter(helper, logger, config) {
     exec("echo active > " + filePath, handle);
 
     var DEFAULT_CONFIG = {
-        device: '/dev/input/ckb/1',
+        device: '/dev/input/ckb1',
         running: '0000FF',
         error: 'FF0000',
         success: '00FF000'
@@ -17,7 +17,7 @@ function CkbReporter(helper, logger, config) {
     var config = helper.merge(DEFAULT_CONFIG, config);
     var log = logger.create('reporter.ckb');
 
-    var filePath = device + "/cmd";
+    var filePath = config.device + "/cmd";
 
     this.onRunStart = function() {
         setColor(config.running);
