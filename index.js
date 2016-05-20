@@ -4,9 +4,6 @@ function handle(error) { if (error) { throw error } }
 
 function CkbReporter(helper, logger, config) {
 
-    //Ensure the device is in software mode
-    exec("echo active > " + filePath, handle);
-
     var DEFAULT_CONFIG = {
         device: '/dev/input/ckb1',
         running: '0000FF',
@@ -18,6 +15,9 @@ function CkbReporter(helper, logger, config) {
     var log = logger.create('reporter.ckb');
 
     var filePath = config.device + "/cmd";
+
+    //Ensure the device is in software mode
+    exec("echo active > " + filePath, handle);
 
     this.onRunStart = function() {
         setColor(config.running);
